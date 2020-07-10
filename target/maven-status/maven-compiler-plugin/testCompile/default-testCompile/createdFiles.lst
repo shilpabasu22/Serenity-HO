@@ -1,1 +1,15 @@
+pages\CheckIfVisitingFamilyPage.class
+pages\StartVisaApplicationPage.class
+pages\CheckIfYouNeedVisaPage.class
+ui\StartVisaApplicationUIPage.class
+pages\SelectCountryPage.class
+VisaValidation\AppTest.class
+pages\VisaDurationPage.class
+pages\VisaRequirementDecisionPage.class
+ui\VisaRequirementDecisionUIPage.class
+ui\CheckIfYouNeedVisaUIPage.class
 stepdefinitions\CheckVisaRequirement.class
+ui\VisaDurationUIPage.class
+runner\VisaValidationTest.class
+ui\SelectCountryUIPage.class
+ui\CheckIfVisitingFamilyUIPage.class
