@@ -12,20 +12,69 @@
 
 
   <properties>
-    <serenity.version>2.2.8</serenity.version>
-    <serenity.maven.version>2.2.8</serenity.maven.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <serenity.version>2.1.13</serenity.version>
+    <serenity.maven.version>2.1.13</serenity.maven.version>
+    <serenity.cucumber.version>2.1.2</serenity.cucumber.version>
+    <cucumber.version>4.8.0</cucumber.version>
     <encoding>UTF-8</encoding>
+    <tags/>
     <parallel.tests>4</parallel.tests>
     <webdriver.base.url/>
-    <tags/>
   </properties>
+
+  <repositories>
+    <repository>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+      <id>central</id>
+      <name>bintray</name>
+      <url>https://jcenter.bintray.com</url>
+    </repository>
+  </repositories>
+  <pluginRepositories>
+    <pluginRepository>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+      <id>central</id>
+      <name>bintray-plugins</name>
+      <url>https://jcenter.bintray.com</url>
+    </pluginRepository>
+  </pluginRepositories>
+
   <dependencies>
+    <dependency>
+      <groupId>ch.qos.logback</groupId>
+      <artifactId>logback-classic</artifactId>
+      <version>1.0.13</version>
+    </dependency>
+    <!--
+      - To use Cucumber 4, exclude the old Cucumber 2 cucumber-core dependency from the serenity-core dependency
+      - and include the Cucumber 4 cucumber-java and cucumber-junit dependencies.
+    -->
     <dependency>
       <groupId>net.serenity-bdd</groupId>
       <artifactId>serenity-core</artifactId>
       <version>${serenity.version}</version>
       <scope>test</scope>
+      <exclusions>
+        <exclusion>
+          <groupId>io.cucumber</groupId>
+          <artifactId>cucumber-core</artifactId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+    <dependency>
+      <groupId>io.cucumber</groupId>
+      <artifactId>cucumber-java</artifactId>
+      <version>${cucumber.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>io.cucumber</groupId>
+      <artifactId>cucumber-junit</artifactId>
+      <version>${cucumber.version}</version>
     </dependency>
     <dependency>
       <groupId>net.serenity-bdd</groupId>
@@ -39,23 +88,22 @@
       <version>${serenity.version}</version>
       <scope>test</scope>
     </dependency>
-    <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-failsafe-plugin -->
     <dependency>
-      <groupId>org.apache.maven.plugins</groupId>
-      <artifactId>maven-failsafe-plugin</artifactId>
-      <version>3.0.0-M5</version>
+      <groupId>net.serenity-bdd</groupId>
+      <artifactId>serenity-screenplay-webdriver</artifactId>
+      <version>${serenity.version}</version>
       <scope>test</scope>
     </dependency>
-
     <dependency>
-      <groupId>ch.qos.logback</groupId>
-      <artifactId>logback-classic</artifactId>
-      <version>1.0.13</version>
+      <groupId>net.serenity-bdd</groupId>
+      <artifactId>serenity-cucumber4</artifactId>
+      <version>${serenity.cucumber.version}</version>
+      <scope>test</scope>
     </dependency>
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
-      <version>4.13</version>
+      <version>4.12</version>
       <scope>test</scope>
     </dependency>
     <dependency>
@@ -76,14 +124,14 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-surefire-plugin</artifactId>
-        <version>3.0.0-M4</version>
+        <version>2.22.1</version>
         <configuration>
           <skip>true</skip>
         </configuration>
       </plugin>
       <plugin>
         <artifactId>maven-failsafe-plugin</artifactId>
-        <version>3.0.0-M5</version>
+        <version>2.22.1</version>
         <configuration>
           <includes>
             <include>**/*Test.java</include>
@@ -110,7 +158,7 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
-        <version>3.7.0</version>
+        <version>3.8.0</version>
         <configuration>
           <source>1.8</source>
           <target>1.8</target>
@@ -123,6 +171,13 @@
         <configuration>
           <tags>${tags}</tags>
         </configuration>
+        <dependencies>
+          <dependency>
+            <groupId>net.serenity-bdd</groupId>
+            <artifactId>serenity-core</artifactId>
+            <version>${serenity.version}</version>
+          </dependency>
+        </dependencies>
         <executions>
           <execution>
             <id>serenity-reports</id>
