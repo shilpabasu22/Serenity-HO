@@ -1,3 +1,4 @@
 "Story","Title","Result","Date","Stability","Duration (s)"
-"Check Visa Requirement","Visa Requirements","SUCCESS","2020-07-10T17:16:49.7915607+01:00[Europe/London]","0.0","38.02"
-"Check Visa Requirement","Tourism Visa Requirement For Japan","SUCCESS","2020-07-10T17:17:27.824261+01:00[Europe/London]","0.0","11.96"
+"Check Postcode returns code","Check the status for Postcode","SUCCESS","2020-07-11T12:40:15.4614944+01:00[Europe/London]","0.0","4.19"
+"Check Visa Requirement","Visa Requirements","SUCCESS","2020-07-11T12:40:19.6844956+01:00[Europe/London]","0.0","33.52"
+"Check Visa Requirement","Tourism Visa Requirement For Japan","SUCCESS","2020-07-11T12:40:53.2169802+01:00[Europe/London]","0.0","11.13"

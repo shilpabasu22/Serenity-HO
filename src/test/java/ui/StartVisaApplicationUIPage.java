@@ -13,6 +13,7 @@ public class StartVisaApplicationUIPage extends PageObject {
     public void checkVisaStartPageTitle(){
         String pageTitle = $(By.className("gem-c-title__text")).getText();
         Assert.assertTrue("Page Title matches",pageTitle.equalsIgnoreCase("Check if you need a UK visa"));
+        $(By.xpath("//button[@class='gem-c-button govuk-button gem-c-button--inline']")).click();
     }
 
     public void clickStartButton(){
