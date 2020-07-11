@@ -4,12 +4,16 @@ G:\Shilpa\Homeoffice\Candidate-1220780\src\test\java\pages\StartVisaApplicationP
 G:\Shilpa\Homeoffice\Candidate-1220780\src\test\java\pages\CheckIfYouNeedVisaPage.java
 G:\Shilpa\Homeoffice\Candidate-1220780\src\test\java\VisaValidation\AppTest.java
 G:\Shilpa\Homeoffice\Candidate-1220780\src\test\java\pages\VisaRequirementDecisionPage.java
+G:\Shilpa\Homeoffice\Candidate-1220780\src\test\java\runner\PostcodeTest.java
 G:\Shilpa\Homeoffice\Candidate-1220780\src\test\java\ui\StartVisaApplicationUIPage.java
 G:\Shilpa\Homeoffice\Candidate-1220780\src\test\java\stepdefinitions\CheckVisaRequirement.java
 G:\Shilpa\Homeoffice\Candidate-1220780\src\test\java\runner\VisaValidationTest.java
 G:\Shilpa\Homeoffice\Candidate-1220780\src\test\java\pages\SelectCountryPage.java
+G:\Shilpa\Homeoffice\Candidate-1220780\src\test\java\stepdefinitions\Postcode.java
+G:\Shilpa\Homeoffice\Candidate-1220780\src\test\java\api\PostcodeAPI.java
 G:\Shilpa\Homeoffice\Candidate-1220780\src\test\java\ui\CheckIfYouNeedVisaUIPage.java
 G:\Shilpa\Homeoffice\Candidate-1220780\src\test\java\ui\SelectCountryUIPage.java
 G:\Shilpa\Homeoffice\Candidate-1220780\src\test\java\ui\VisaDurationUIPage.java
 G:\Shilpa\Homeoffice\Candidate-1220780\src\test\java\ui\VisaRequirementDecisionUIPage.java
 G:\Shilpa\Homeoffice\Candidate-1220780\src\test\java\pages\VisaDurationPage.java
+G:\Shilpa\Homeoffice\Candidate-1220780\src\test\java\stepdefinitions\PostcodeApISteps.java
